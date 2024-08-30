@@ -1,5 +1,5 @@
 
-<h1>CrypX  Encryption system</h1>
+<h1>CrypX - Encryption system</h1>
 <p>Library for encryption and decryption of strings or integers, based on PHP</p>
 <p>Based on the openssl library</p>
 <p>It is a simple library that allows you to encrypt and decrypt strings or integers</p>
@@ -8,12 +8,12 @@
 <p>Then you can use the methods of the class</p>
 <p>Example:</p>
 <pre>
-    require_once('lib.php');
-    $cryp = new CrypX();
-    $key = $cryp->randKey(16);
-    $iv = $cryp->randIv();
-    $encrypted = $cryp->encrypt("Library for encryption and decryption of strings or integers, based on PHP",$key,$iv);
-    $decrypt = $cryp->decrypt($encriptado,$key,$iv);
+    require_once realpath(__DIR__) .  DIRECTORY_SEPARATOR . 'lib.php';
+    $CrypX = new CrypX;
+    $key = $CrypX->getRand('bin2hex', 16);
+    $iv = $CrypX->getRand('encode');
+    $encrypted = $CrypX->encrypt("Library for encryption and decryption of strings or integers, based on PHP",$key,$iv);
+    $decrypt = $CrypX->decrypt($encriptado,$key,$iv);
 </pre>
 <strong>It is important to keep the key and iv to decrypt the data</strong>
 <h2>Explain</h2>
@@ -23,4 +23,4 @@
     <li><p><strong>encrypt: </strong>It encrypts the data with the key and iv</p></li>
     <li><p><strong>decrypt: </strong>It decrypts the data with the key and iv</p></li>
 </ul>
-<h2 center>By Aexstudios</h2>
+<h2 center>By Aexstudios | Update Miguel92</h2>
